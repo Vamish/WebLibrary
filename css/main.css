@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background: #F1ECE9;
+}
+.container div[class$='-content'] {
+  display: inline-block;
+  width: 50%;
+  top: 0;
+}
+.container div[class$='-content'].left-content {
+  left: 0;
+}
+.container div[class$='-content'].right-content {
+  right: 0;
+}
+.container .left-content {
+  position: fixed;
+}
+.container .left-content .logo {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  overflow: hidden;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+}
+.container .left-content .logo img {
+  width: 90px;
+  height: 90px;
+}
+.container .left-content footer {
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 330px;
+  left: -100px;
+}
+.container .right-content {
+  position: absolute;
+}
+.container .right-content #search_keyword {
+  margin-top: 160px;
+  margin-bottom: 40px;
+}
+.container .right-content #book-list .book {
+  transition-delay: 300ms;
+  list-style: none;
+  width: 460px;
+  height: 100px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f5f4f4;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.container .right-content #book-list .book:before {
+  content: '';
+  width: 36px;
+  height: 62px;
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: url("../img/bookdart.png") no-repeat center;
+  background-size: 100%;
+}
+.container .right-content #book-list .book.expand {
+  width: 440px;
+  padding: 30px;
+  height: 600px;
+  border-radius: 1px 8px 8px 1px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+}
+.container .right-content #book-list .book.expand .book-title {
+  width: 420px;
+  font-size: 24px;
+  line-height: 24px;
+  max-height: 48px;
+}
+.container .right-content #book-list .book.expand .book-title:before {
+  content: "《";
+  position: relative;
+  margin-left: -10px;
+}
+.container .right-content #book-list .book.expand .book-title:after {
+  content: "》";
+}
+.container .right-content #book-list .book.expand .book-author {
+  letter-spacing: 1px;
+}
+.container .right-content #book-list .book.expand .book-publisher {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  opacity: 1;
+}
+.container .right-content #book-list .book.expand .info-card {
+  display: block;
+  left: -425px;
+  opacity: 1;
+  transform: rotate(-5deg);
+  transition-delay: 800ms;
+  cursor: default;
+}
+.container .right-content #book-list .book [class^=book-] {
+  transition-delay: 300ms;
+}
+.container .right-content #book-list .book .book-title {
+  width: 430px;
+  font-size: 22px;
+  line-height: 22px;
+  max-height: 44px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.container .right-content #book-list .book .book-author {
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 10px;
+  color: #949494;
+}
+.container .right-content #book-list .book .book-call-number {
+  color: #5A5A5A;
+}
+.container .right-content #book-list .book .book-publisher {
+  opacity: 0;
+  display: none;
+}
+.container .right-content #book-list .book .info-card {
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  position: absolute;
+  background: #f5f4f4;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  left: 0;
+  top: 60px;
+  z-index: -1;
+  border-radius: 5px 5px 2px 2px;
+  transform: rotate(0deg);
+  transition-delay: 0s;
+  pointer-events: none;
+}
+.container .right-content #book-list .book .info-card [class^=status-] {
+  font-family: 'JuzhenFang1a4cb76564bf4';
+}
+.container .right-content #book-list .book .info-card .status-title {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  font-size: 36px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #000000;
+}
+.container .right-content #book-list .book .info-card .status-name {
+  width: 100%;
+}
+.container .right-content #book-list .book .info-card .status-name tr td {
+  padding: 5px 0;
+  font-family: initial;
+}
+.container .right-content #book-list .book .info-card .status-name th {
+  width: 35%;
+  padding-bottom: 15px;
+}
+.container .right-content #book-list .book .info-card .status-name th:first-child {
+  width: 46%;
+}
+.container .right-content #book-list .book .info-card .status-name th:last-child {
+  width: 19%;
+}
+.container .right-content #book-list .book.hide {
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}

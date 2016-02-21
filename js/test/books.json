@@ -1,0 +1,132 @@
+{"status": "Success", "booksTotal": "13", "pageTotal": "1", "pageCurrent": 1, "booksList": [
+    {
+        "No": 1,
+        "ID": "3485229",
+        "name": "世界艺术设计简史 [专著]",
+        "author": "瞿孜文编著",
+        "publisher": "中南大学出版社",
+        "callNumber": "J509.1/QZ20",
+        "total": "1",
+        "available": "1"
+    },
+    {
+        "No": 2,
+        "ID": "3284842",
+        "name": "知日·设计力 [专著]",
+        "author": "苏静主编",
+        "publisher": "中信出版社",
+        "callNumber": "K931.3-55/SJ0",
+        "total": "4",
+        "available": "3"
+    },
+    {
+        "No": 3,
+        "ID": "3045634",
+        "name": "立体构成 [专著]",
+        "author": "吴艺华著",
+        "publisher": "上海人民美术出版社",
+        "callNumber": "J06/WY8",
+        "total": "4",
+        "available": "4"
+    },
+    {
+        "No": 4,
+        "ID": "2806340",
+        "name": "设计与文化导论",
+        "author": "(英) 彭妮·斯帕克(Penny Sparke)著；钱凤根, 于晓红译",
+        "publisher": "译林出版社",
+        "callNumber": "J06/SP10",
+        "total": "4",
+        "available": "4"
+    },
+    {
+        "No": 5,
+        "ID": "2759641",
+        "name": "色彩构成 [专著]",
+        "author": "吴艺华著",
+        "publisher": "上海人民美术出版社",
+        "callNumber": "J063/WY8",
+        "total": "3",
+        "available": "3"
+    },
+    {
+        "No": 6,
+        "ID": "2694819",
+        "name": "创意思考术",
+        "author": "(日) 佐藤可士和著；时江涛译",
+        "publisher": "北京科学技术出版社",
+        "callNumber": "B804.4/ZT10",
+        "total": "4",
+        "available": "3"
+    },
+    {
+        "No": 7,
+        "ID": "2667628",
+        "name": "日本风格之旅＝Japan style：十七味日本设计遇上顶尖品牌",
+        "author": "柯珊珊著·摄影",
+        "publisher": "化学工业出版社",
+        "callNumber": "J534/KS18",
+        "total": "4",
+        "available": "3"
+    },
+    {
+        "No": 8,
+        "ID": "2583281",
+        "name": "漫步日本设计 [专著]＝Ramble design of Japan：极致的简约之美：the beauty of extremmely conciseness",
+        "author": "王绍强编著",
+        "publisher": "电子工业出版社",
+        "callNumber": "J06/WS16",
+        "total": "1",
+        "available": "0"
+    },
+    {
+        "No": 9,
+        "ID": "2362704",
+        "name": "Idea+10 [专著]·2：一计点睛的即效设计处方",
+        "author": "(日) DTPWORLD编辑部编著；丁莲译",
+        "publisher": "中国青年出版社",
+        "callNumber": "J534/DL0",
+        "total": "2",
+        "available": "2"
+    },
+    {
+        "No": 10,
+        "ID": "2344930",
+        "name": "漫步日本设计＝Ramble design of Japan：极致的简约之美：the beauty of extremmely conciseness",
+        "author": "王绍强编著",
+        "publisher": "电子工业出版社",
+        "callNumber": "J06/WS16",
+        "total": "2",
+        "available": "1"
+    },
+    {
+        "No": 11,
+        "ID": "1997432",
+        "name": "设计中的设计＝Designing design：全本",
+        "author": "原研哉[著]；纪江红翻译",
+        "publisher": "广西师范大学出版社",
+        "callNumber": "J534(313)/YY23",
+        "total": "1",
+        "available": "0"
+    },
+    {
+        "No": 12,
+        "ID": "1811374",
+        "name": "设计的觉醒＝Awakening of design",
+        "author": "田中一光著；朱锷编",
+        "publisher": "广西师范大学出版社",
+        "callNumber": "TB47-53/TZ22",
+        "total": "2",
+        "available": "2"
+    },
+    {
+        "No": 13,
+        "ID": "283298",
+        "name": "艺术·设计的平面构成",
+        "author": "(日)朝仓直巳著；林征,林华译",
+        "publisher": "中国计划出版社",
+        "callNumber": "J061/ZC23",
+        "total": "1",
+        "available": "1"
+    }
+]}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href='http://api.youziku.com/webfont/CSS/56c88003f629d80b8819a4c3' rel='stylesheet' type='text/css'/>
+    <link href='http://api.youziku.com/webfont/CSS/56c89c34f629d80b8819a4c7' rel='stylesheet' type='text/css'/>
+</head>
+<body>
+<div class="container">
+    <div class="left-content">
+        <a class="logo" href="#"><img src="img/lib-logo.png" alt="logo"/></a>
+        <footer class="css1a45d56334bf4">Copyright © 2016 - Made with love by Vango.</footer>
+    </div>
+    <div class="right-content">
+        <h1 id="search_keyword">被搜索的关键词</h1>
+        <ul id="book-list">
+            <li class="book" v-for="book in books" data-book-id="{{book.ID}}">
+                <h2 class="book-title">{{book.name}}</h2>
+                <h5 class="book-author">{{book.author}}</h5>
+                <h6 class="book-call-number">{{book.callNumber}}</h6>
+
+                <div class="book-publisher">{{book.publisher}}</div>
+
+                <div class="info-card">
+                    <div class="status-title">藏书卡</div>
+                    <table class="status-name" id="status_table_{{book.ID}}">
+                        <thead>
+                        <tr>
+                            <th>馆藏地</th>
+                            <th>书本状态</th>
+                            <th>书本类型</th>
+                        </tr>
+                        </thead>
+                        <tr v-for="info in infoes">
+                            <td>{{info.location}}</td>
+                            <td>{{info.bookStatus}}</td>
+                            <td>{{info.bookType}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </li>
+            <!--<li class="book">-->
+            <!--<h2 class="book-title">测试一个很长很长很长很长长很长很长很长的标题</h2>-->
+            <!--<h5 class="book-author">作者是我</h5>-->
+
+            <!--<div class="book-publisher">出版社信息</div>-->
+
+            <!--<div class="info-card"></div>-->
+            <!--</li>-->
+            <!--<li class="book"></li>-->
+        </ul>
+    </div>
+</div>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/vue.min.js"></script>
+<script>
+    (function ($) {
+        var vm = new Vue({
+            el: '#book-list',
+            data: {infoes: [
+                {"location": "加载中"}
+            ]}
+        });
+
+        $.ajax({
+            url: 'js/test/books.json',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                if (data.status = "success") {
+                    vm.$set('books', data.booksList);
+                }
+            }
+        });
+
+        $('#book-list').on('click', '.book', function (e) {
+            e.preventDefault();
+            $('.book').removeClass('expand');
+            console.log('book-id', $(this).data('book-id'));
+            $(this).toggleClass('expand').promise().done(function () {
+                setTimeout(function () {
+                    $('html body').animate({
+                        scrollTop: $('.expand').offset().top - ($(window).height() - 640) / 2 + 'px'
+                    });
+                }, 550);
+            });
+            var bookId = $(this).data('book-id');
+            var bookDetailUrl = 'http://api.diviniti.cn/jmu/library/book/' + bookId;
+            var table_id = '#status_table_' + bookId;
+            console.log(table_id);
+
+            vm.$set('infoes', {"location": "加载中"});
+            $.ajax({
+                url: bookDetailUrl,
+                dataType: 'json',
+                type: 'GET',
+                success: function (data) {
+                    console.log(data);
+                    vm.$set('infoes', data.infoes);
+                }
+            });
+        });
+    })
+    (jQuery)
+</script>
+</body>
+</html>
